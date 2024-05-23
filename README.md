@@ -1,3 +1,86 @@
+原项目地址：https://github.com/vveg26/sing-box-reality-hysteria2
+参考项目：https://github.com/liuoqu444/sing-box-reality-hysteria2
+
+# 提示事项
+
+- 更新源
+```bash
+apt update -y && apt install -y 
+```
+
+- 关闭防火墙
+```bash
+sudo ufw disable
+```
+
+- 查看应用占用的端口
+```bash
+sudo netstat -tuln
+```
+没有netstat包处理
+net-tools安装：
+Ubuntu / Debian:
+sudo apt-get install net-tools
+
+Amazon Linux / CentOS / RHEL:
+sudo yum install net-tools
+
+- 启动
+```bash
+# 启动服务
+systemctl start sing-box.service
+
+# 查看启动状态
+systemctl status sing-box.service
+
+# 设置开机启动
+systemctl enable sing-box.service
+
+# 运行 -c 指定一个配置文件
+sing-box run -c /etc/sing-box/config.json
+```
+
+# 域名推荐
+  gateway.icloud.com (推荐)
+  itunes.apple.com
+  download-installer.cdn.mozilla.net
+  airbnb【这个不同的区有不同的域名建议自己搜索】
+  addons.mozilla.org
+  www.microsoft.com
+  www.lovelive-anime.jp
+
+- CDN
+  Apple:
+  swdist.apple.com
+  swcdn.apple.com
+  updates.cdn-apple.com
+  mensura.cdn-apple.com
+  osxapps.itunes.apple.com
+  aod.itunes.apple.com
+
+Microsoft:
+  cdn-dynmedia-1.microsoft.com
+  update.microsoft
+  software.download.prss.microsoft.com
+
+Amazon:
+  s0.awsstatic.com
+  d1.awsstatic.com
+  images-na.ssl-images-amazon.com
+  m.media-amazon.com
+  player.live-video.net
+
+Google:
+  dl.google.com
+
+### 三合一脚本
+
+```bash
+bash <(curl -fsSL https://github.com/mijaclan/sing-box-reality-hysteria2/raw/main/beta.sh)
+```
+
+
+# 建议
 - 强烈建议开启bbr加速，可大幅加快节点reality和vmess节点的速度
 - 安装完成后终端输入 mianyang 可再次调用本脚本
 
